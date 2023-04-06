@@ -38,8 +38,8 @@ def get_meteor(gts, res):
 
 def get_cider(gts, res):
     scorer = Cider()
-    s, _ = scorer.compute_score(gts, res)
-    return s
+    s, scores_c = scorer.compute_score(gts, res)
+    return s, scores_c
 
 def get_rouge(gts, res):
     scorer = Rouge()
